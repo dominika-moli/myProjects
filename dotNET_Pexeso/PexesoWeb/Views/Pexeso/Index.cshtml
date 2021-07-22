@@ -1,0 +1,153 @@
+
+@using PexesoGame.Models;
+@using PexesoGame.Core;
+@model PexesoModel
+
+@{
+    ViewData["Title"] = "PexesoGame";
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/site.css">
+    <title> Pexeso</title>
+</head>
+<body>
+    <header class="hlavicka">
+        <h1>Welcome to Pexeso Game</h1>
+    </header>
+
+<main class="obal">
+    <section class="vlavo">
+        <h3>Description</h3>
+        <p>Play the <b>Pexeso Game</b>- a simple and educational mind game!  Pexeso is a card game in 
+            which all of the cards are laid face down on a surface and two cards are flipped face 
+            up over each turn. The purpose of the game is to <b>turn over pairs of matching cards</b>. </p>
+        <h3>Rules</h3>
+        <p>A board of <i>shuffled cards</i> where each card appears twice is placed in front of you with the cards facing 
+            down so you can't see which card is where. The idea is <b>to match the pairs of cards until there are no more 
+            cards available</b>. At each turn you are allowed to flip two cards. If the two cards are identical then the 
+            pair is solved, and does not close, otherwise the cards are flipped again so you can't see them. You should remember the
+            cards positions once you have seen them, in fact that's the purpose of the game! You continue 
+            flipping pairs of cards until you have successfully matched all cards. </p>
+        <h3>Hints & Solution</h3>
+        <p>During the game, you are able to use <b>3 Hints</b>, which means 3 pairs of cards will be paired for you.
+        There is an option to see <b>Solution</b> of the game, which you can use if you are unable to pair your pexeso cards.</p>
+
+
+
+    </section>
+<section class="stred">
+
+@if ((ViewBag.StavHry==1) || (ViewBag.StavHry==2)) 
+{
+    <h2>@Model.Board.Name's Board</h2>
+    <table class="board" class="mainContent">
+        @for (var row = 0; row < Model.Board.RowCount; row++)
+        {
+            <tr>
+                @for (var column = 0; column < Model.Board.ColumnCount; column++)
+                {
+                    var card = Model.Board.CardsArray[row, column];
+                    if (card == null)
+                    {
+                        <td />
+                    } else
+                    {
+                        <td>
+                            @if (card.MyCardState==CardState.CLOSED) 
+                            {
+                                <a href=Index?hra=2&row=@row&column=@column><img src="/images/@Model.Board.Level/karta.jpg"/></a> 
+                           } else 
+                           {
+                               @if (card.MyCardState==CardState.OPENED) 
+                               {
+                                   <img src="/images/@Model.Board.Level/@Model.Board.Level@(card.CardValue).jpg"/>
+                                } else 
+                                {
+                                    <img src="/images/@Model.Board.Level/@Model.Board.Level@(card.CardValue).jpg"/>
+                                } 
+                            }
+                        </td>
+                    }
+                }
+         </tr>
+        }
+    </table>
+    @if (ViewBag.Score!=0) 
+    {
+    <h2>You did it. Your score is @ViewBag.Score.</h2>
+    }
+}
+</section>
+
+<section class="vpravo">
+    <div id="spat" class="link">
+    <a  href="/Home/Index"> << Back</a>
+    </div>
+    <br>
+    <div id="hintik" class="link">
+    <a  href="/Pexeso/Index?hra=2&hint=1">Hint (@Model.Board.Hints)</a>
+    </div>
+    <br>
+    <div id="riesenie" class="link">
+    <a  href="/Pexeso/Index?hra=2&hint=2">Solution</a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <button type="button" id="buttonAddComment" class="centerik" onclick="showCom()">Add Comment</button>
+<br>
+
+<fieldset id="commentiky" class="hiddenElm">
+    <h2> Write your comment...</h2>
+    <form action="/Pexeso/Index" method="POST">
+        <div class="dropdown">
+            <input id="c" type="hidden" name="c" value="1">
+            <input id="hra" type="hidden" name="Hra" value="2">
+            <input id="row" type="hidden" name="Row" value="-1">
+            <input id="column" type="hidden" name="Column" value="-1">
+        <textarea id="comment" rows="5" cols="35" name="comment" ></textarea>
+        </div>
+        <br>
+        <button type="button" id="buttonCancelComment" class="" onclick="hideCom()">Cancel</button>  
+        <input type="submit" id="buttonAddCom" value="COMMENT" />
+    </form>
+</fieldset>
+<br>
+
+<button type="button" id="buttonAddRating" class="centerik" onclick="showRat()">Add Rating</button>
+<br>
+<fieldset id="rejting" class="hiddenElm">
+    <h2> Rate the Game...</h2>
+    <form action="/Pexeso/Index" method="POST">
+        <div class="dropdown">
+        <input id="hra" type="hidden" name="Hra" value="2">
+        <input id="row" type="hidden" name="Row" value="-1">
+        <input id="column" type="hidden" name="Column" value="-1">
+        <h3>How many Stars?</h3>
+        <select id="rating" name="Rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        </div>  
+        <br>
+        <button type="button" id="buttonCancelRat" class="" onclick="hideRat()">Cancel</button>  
+        <input type="submit" id="buttonAddRat" value="RATING" />
+    </form>
+</fieldset>
+<br>
+    </section>
+    <br>
+</main>
+<br/>
+<footer>
+    © Dominika Molitorisová &nbsp; |&nbsp;  PEXESO &nbsp; | &nbsp; 09.05.2020 &nbsp;|&nbsp;<a href="mailto:domca@gmail.com?Subject=Reakcia%20na%20pexeso">email</a>
+</footer>
+<script src="/js/pexeso.js"></script>
+</body>
+</html>

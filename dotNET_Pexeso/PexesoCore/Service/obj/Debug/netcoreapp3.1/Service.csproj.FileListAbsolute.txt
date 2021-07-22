@@ -1,0 +1,3 @@
+/home/dominika/PEXESO/PexesoCore/Service/obj/Debug/netcoreapp3.1/Service.csprojAssemblyReference.cache
+/home/dominika/PEXESO/PexesoCore/Service/obj/Debug/netcoreapp3.1/Service.AssemblyInfoInputs.cache
+/home/dominika/PEXESO/PexesoCore/Service/obj/Debug/netcoreapp3.1/Service.AssemblyInfo.cs

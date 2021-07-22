@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="60" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="42">
+ <tileset firstgid="1" name="tileset01" tilewidth="16" tileheight="16" tilecount="500" columns="20">
+  <image source="tileset01.png" width="320" height="400"/>
+ </tileset>
+ <tileset firstgid="501" name="tileset02" tilewidth="16" tileheight="16" tilecount="500" columns="20">
+  <image source="tileset02.png" width="320" height="400"/>
+ </tileset>
+ <layer id="1" name="background" width="60" height="40">
+  <data encoding="base64" compression="zlib">
+   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
+  </data>
+ </layer>
+ <layer id="2" name="walls" width="60" height="40">
+  <data encoding="base64" compression="zlib">
+   eAHlWltOw0AMDOL+p6B3gDvAAXhToDz+4QB4pI5krXbWcR4boa5kuckm9sysvWmqfp0Pw/eJ2M3ZMFyY3RrfUzHw3Zm1BuZxHa9VvhVjjTmPKeLwY/h/HYcWniu77vJ4LXLwMzzn4HsPzzfKn+HLuoeG4Egr17k3X+IAV2BsjQzfvcUquXGdt1xfzw8YWyPDF3Vf1i6PfU218i01p/oUGFsjw5f7VctH/dPCkplTeZQOjJ3h62uWdc31hec5xl7Tqz5VOhBLhq/fr8jNe35m7DW96lOPsZY/wxc5/Hr69cZ5ztXyLH1O9anHWMuZ4Rv1Ri3+WucUFuhwKMxjyPCNesPHXfuzwqJ0IJ4MX7VHMFZPr7AoHYgtw1ftEYzV0yssSgdiy/BVewRj9fQKi9KB2Gp8+VwpewHHeF+8M7s3ezi+P/pjxl3bl9iYT+nA+Rpf4EcflDGj3niy+3oNhaXEXOKp8VXP0qg3evJVWJQO5F3jy7nSR73Rk6/ConQglwzfqFZ68lV9qnSYwjeqlZ58lfZKhyl8fa1wn6bnfs24a3ulvdKBeDL1HNUKY/bwXnufT+nAazJ8o1phzKzH857P/LH3Ku2VDoyb4RvVCmNmPfniuT82h9Je6UBMGb5RrTBm1uN5D86Z92eli9KBmDJ8o1phzCk+wxXxlfZKB2LK8I1iMWYPr7RXOhBThm8UizF7eNWnSgdiyvCNYjFmD6/6VOlATBm+W9cz8h+ckYP30AHXlIP3ZfhuXc9j8pPXEny3ruddZd1KXtFxZn2j3ohyzZ0fs75RjgxftUdEOZaaX6K+MnyXwj01zpz64vfz/8R3Tn3x+xv5nsp/c8j32va+8t390d5X8JvFs9mL2d7s1ezN7N3sYPZh9mn2ZQbN5sbA/S3zv/1OwUe+f2LSA5k=
+  </data>
+ </layer>
+ <objectgroup id="3" name="actors">
+  <object id="1" name="ellen" x="888" y="40.6667" width="32" height="32"/>
+  <object id="2" name="alien" x="838.333" y="423.667" width="32" height="32"/>
+  <object id="4" name="alien" x="823" y="557" width="32" height="32"/>
+  <object id="5" name="alien" x="831" y="245" width="32" height="32"/>
+  <object id="6" name="alien" x="735" y="414" width="32" height="32"/>
+  <object id="7" name="alien" x="886" y="323" width="32" height="32"/>
+  <object id="8" name="alien" x="751" y="266" width="32" height="32"/>
+  <object id="9" name="alien" x="682" y="528" width="32" height="32"/>
+  <object id="10" name="alien" x="224" y="397" width="32" height="32"/>
+  <object id="11" name="alien" x="740" y="133" width="32" height="32"/>
+  <object id="12" name="alien" x="588" y="564" width="32" height="32"/>
+  <object id="13" name="alien" x="397" y="402" width="32" height="32"/>
+  <object id="14" name="alien" x="102" y="217" width="32" height="32"/>
+  <object id="15" name="alien" x="602" y="87" width="32" height="32"/>
+  <object id="16" name="large box" x="531" y="116" width="16" height="16"/>
+  <object id="17" name="door" x="142" y="577" width="16" height="32"/>
+  <object id="19" name="armed egg" x="37" y="498" width="32" height="32"/>
+  <object id="20" name="teleport" x="63" y="50" width="48" height="48"/>
+  <object id="21" name="ammo" x="369" y="98" width="16" height="16"/>
+  <object id="22" name="ammo" x="516" y="580" width="16" height="16"/>
+  <object id="23" name="ammo" x="819" y="114" width="16" height="16"/>
+  <object id="25" name="barrel" x="182" y="305" width="16" height="16"/>
+  <object id="27" name="large box" x="46" y="399" width="16" height="16"/>
+  <object id="28" name="alien mother" x="337" y="191" width="112" height="162"/>
+  <object id="29" name="armed alien" x="881" y="437" width="32" height="32"/>
+  <object id="31" name="armed alien" x="235" y="323" width="32" height="32"/>
+  <object id="32" name="alien" x="885" y="230" width="32" height="32"/>
+  <object id="38" name="alien" x="289" y="546" width="32" height="32"/>
+  <object id="39" name="alien" x="256" y="211" width="32" height="32"/>
+  <object id="40" name="alien" x="590" y="274" width="32" height="32"/>
+ </objectgroup>
+</map>

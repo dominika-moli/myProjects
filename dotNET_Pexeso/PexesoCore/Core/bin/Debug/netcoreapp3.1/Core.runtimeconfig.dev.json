@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/home/dominika/.dotnet/store/|arch|/|tfm|",
+      "/home/dominika/.nuget/packages"
+    ]
+  }
+}

@@ -1,0 +1,255 @@
+html {
+    font-family:  verdana, serif;
+    font-style: normal;
+    font-weight: normal;
+    text-align: justify;
+    color: #5D5C61;
+    line-height: 1.5;
+    font-size: 100%;
+}
+main {
+    margin: 1%;
+}
+.hlavicka {
+    background-color: #E85A4F;
+    padding: 1.25rem;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.checked {
+    color: orange;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;    
+    color: #5D5C61;
+  }
+  
+footer {
+    background-color: #E85A4F;
+    padding: 0.65rem;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .obal{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .board {
+   margin: 0 auto;
+  }
+
+.scores {
+    flex: 20%;
+    background-color: #ebecf0;
+    padding: 2rem 3rem;
+    border-radius: 0.5rem;
+    color: #5D5C61;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.ratings {
+    flex: 20%;
+    background-color: #ebecf0;
+    padding: 2rem 3rem;
+    border-radius: 0.5rem;
+    color: #5D5C61;   
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.comments {
+    flex: 35%;
+    background-color: #ebecf0;
+    padding: 2rem 3rem;
+    border-radius: 0.5rem;
+    margin-top: 1%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    color: #5D5C61; 
+}
+
+.vlavo {
+  flex: 19%;
+}
+
+.stred {
+  flex: 50%;
+}
+.vpravo {
+  flex: 19%;
+  margin-left: 3%;
+}
+
+h2 {
+    color: #5D5C61;
+    text-align: center;
+}
+
+.hiddenElm {
+    display:none;
+}
+
+.center {
+    margin: 0 auto;
+    width: 30%;
+  }
+  .centerik {
+    display: block;
+  }
+
+  #settings{
+    padding: 1rem;       
+  }
+
+  #buttonNewGame{
+    margin: 0 auto;
+    background-color: #5D5C61;
+    color: whitesmoke;
+    border-radius: 0.5rem;
+    border-width: 0.1rem;
+    padding: 0.3rem;
+    font-size: 1.8rem;
+    width: 15rem;
+  }
+
+  .dropdown {
+    margin: 2%;
+  }
+
+  #buttonCancelGame{
+    background-color: #5D5C61;
+    color: whitesmoke;
+    border-radius: 0.5rem;
+    border-width: 0.1rem;
+    padding: 0.3rem;
+    font-size: 1rem;
+    max-width: 10rem;
+    margin-right: 3%;
+  }
+
+  #buttonStartGame{
+    background-color: #5D5C61;
+    color: whitesmoke;
+    border-radius: 0.5rem;
+    border-width: 0.1rem;
+    padding: 0.3rem;
+    font-size: 1.5rem;
+    max-width: 10rem;
+  }
+
+  #buttonCancelComment{
+    background-color: #5D5C61;
+    color: whitesmoke;
+    border-radius: 0.5rem;
+    border-width: 0.1rem;
+    padding: 0.3rem;
+    font-size: 1rem;
+    max-width: 10rem;
+    margin-right: 3%;
+  }
+
+  #buttonAddCom{
+    background-color: #5D5C61;
+    color: whitesmoke;
+    border-radius: 0.5rem;
+    border-width: 0.1rem;
+    padding: 0.3rem;
+    font-size: 1.5rem;
+    max-width: 10rem;
+  }
+
+  #buttonCancelRat{
+    background-color: #5D5C61;
+    color: whitesmoke;
+    border-radius: 0.5rem;
+    border-width: 0.1rem;
+    padding: 0.3rem;
+    font-size: 1rem;
+    max-width: 10rem;
+    margin-right: 3%;
+  }
+
+  #buttonAddRat{
+    background-color: #5D5C61;
+    color: whitesmoke;
+    border-radius: 0.5rem;
+    border-width: 0.1rem;
+    padding: 0.3rem;
+    font-size: 1.5rem;
+    max-width: 10rem;
+  }
+
+  h3 {
+    color:#5D5C61 ;
+ }
+
+fieldset {
+border-radius: 0.5rem;
+background-color: #ebecf0;
+border-color: #ebecf0;
+border-width: 0px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.link{
+   background-color: #5D5C61;
+   border-radius: 0.5rem;
+   border-width: 0.1rem;
+   padding: 0.3rem;
+   font-size: 1.5rem;
+   width: 6rem;
+   text-align: center;
+   margin: 0 auto;
+}
+.link >a {
+  color: white;
+  align-content: center;
+}
+
+.link >a:visited{
+  color: white;
+}
+
+#buttonAddComment{
+  margin: 0 auto;
+  background-color: #5D5C61;
+  color: whitesmoke;
+  border-radius: 0.5rem;
+  border-width: 0.1rem;
+  padding: 0.3rem;
+  font-size: 1.5rem;
+  width: 12rem;
+}
+
+#buttonAddRating{
+  margin: 0 auto;
+  background-color: #5D5C61;
+  color: whitesmoke;
+  border-radius: 0.5rem;
+  border-width: 0.1rem;
+  padding: 0.3rem;
+  font-size: 1.5rem;
+  width: 12rem;
+}

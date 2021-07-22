@@ -1,0 +1,106 @@
+@using PexesoGame.Models;
+@model HomeModel
+
+@{
+    ViewData["Title"] = "PexesoGame";
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/site.css">
+    <title> Pexeso</title>
+</head>
+
+<body>
+    <header class="hlavicka">
+        <h1>Welcome to Pexeso Game</h1>
+    </header>
+
+<main >    
+    <article class="wrap">
+    <section class="scores" >
+        <h2>Top 10 Scores</h2>
+        <ol>
+            @foreach (var score in Model.Scores)
+            {
+                <li><b>@(score.Player) :  </b> @(score.Points)</li>
+            }
+        </ol>
+    </section>
+
+    
+    <section class="ratings" >
+        <h2>Game Ratings</h2>
+        <ul>
+            @foreach (var rating in Model.Ratings)
+            {
+                <li><b>@(rating.Player)</b> @for (var stars = 1; stars <= 5; stars++)
+                {
+                    if (stars<= rating.NumberOfStars)
+                    {
+                        <span class="fa fa-star checked"></span>
+                    } else 
+                    {
+                        <span class="fa fa-star"></span>
+                    }   
+                }</li>
+            }
+        </ul>
+        <h2>Average Rating: @(Model.AvgRating)</h2>
+        </section>
+
+    <section class="comments" >
+        <h2>Comments</h2>
+        <ul>
+            @foreach (var comment in Model.Comments)
+            {
+                <li><b>@(comment.Author) : </b> @(comment.Message)</li>
+            }
+        </ul>
+    </section>
+</article>
+
+<button type="button" id="buttonNewGame" class="centerik" onclick="showHiddenElm()">New Game</button>
+<br>
+<fieldset id="settings" class="hiddenElm center">
+    <h2>Lets play...</h2>
+   
+    <form action="/Pexeso/Index" method="GET">
+        <input id="hra" type="hidden" name="Hra" value="1">
+        <div class="dropdown">
+       <h3> Player Name:</h3> <input type="text" id="pname" name="Pname" value="Anonymous">
+        </div>
+        <div class="dropdown">
+        <h3>Level </h3>
+        <select id="level" name="Level">
+            <option value="animal">Easy</option>
+            <option value="traffic">Medium</option>
+            <option value="flower">Hard</option>
+        </select>
+        </div>
+         <div class="dropdown">
+             <h3>Board Size</h3>
+        <select id="size" name="Size">
+            <option value="2">2 x 2</option>
+            <option value="4">4 x 4</option>
+            <option value="6">6 x 6</option>
+            <option value="8">8 x 8</option>
+        </select>
+        </div>  
+        <br>
+        <button type="button" id="buttonCancelGame" class="" onclick="hideElm()">Cancel</button>  
+        <input type="submit" id="buttonStartGame"value="START" /> 
+    </form>        
+</fieldset>
+<br>
+<br>
+</main>
+<footer>
+    © Dominika Molitorisová &nbsp; |&nbsp;  PEXESO &nbsp; | &nbsp; 09.05.2020 &nbsp;|&nbsp;<a href="mailto:domca@gmail.com?Subject=Reakcia%20na%20pexeso">email</a>
+</footer>
+
+<script src="/js/pexeso.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,11 @@
+/home/dominika/PEXESO/PexesoCore/Core/bin/Debug/netcoreapp3.1/Core
+/home/dominika/PEXESO/PexesoCore/Core/bin/Debug/netcoreapp3.1/Core.deps.json
+/home/dominika/PEXESO/PexesoCore/Core/bin/Debug/netcoreapp3.1/Core.runtimeconfig.json
+/home/dominika/PEXESO/PexesoCore/Core/bin/Debug/netcoreapp3.1/Core.runtimeconfig.dev.json
+/home/dominika/PEXESO/PexesoCore/Core/bin/Debug/netcoreapp3.1/Core.dll
+/home/dominika/PEXESO/PexesoCore/Core/bin/Debug/netcoreapp3.1/Core.pdb
+/home/dominika/PEXESO/PexesoCore/Core/obj/Debug/netcoreapp3.1/Core.csprojAssemblyReference.cache
+/home/dominika/PEXESO/PexesoCore/Core/obj/Debug/netcoreapp3.1/Core.AssemblyInfoInputs.cache
+/home/dominika/PEXESO/PexesoCore/Core/obj/Debug/netcoreapp3.1/Core.AssemblyInfo.cs
+/home/dominika/PEXESO/PexesoCore/Core/obj/Debug/netcoreapp3.1/Core.dll
+/home/dominika/PEXESO/PexesoCore/Core/obj/Debug/netcoreapp3.1/Core.pdb
