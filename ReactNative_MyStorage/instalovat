@@ -1,0 +1,27 @@
+npm i react-native-parse
+npm i expo-app-loading
+npm i @react-native-community/async-storage
+npm install @react-navigation/native
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+npm i react-navigation-stack
+npm i react-navigation-tabs
+npm i parse
+npm i react-navigation
+npm i react-native-simple-dialogs
+npm i expo-barcode-scanner
+npm i expo-permissions
+npm i react-native-vector-icons
+npm install --save react-native-modal
+npm install @react-navigation/drawer
+npm install @react-navigation/stack
+npm i react-native-material-dropdown
+npm i react-native-dropdown-picker
+npm install @react-native-picker/picker --save
+expo install react-native-maps
+expo install expo-location
+npm install react-i18next i18next --save
+npm install react-native-localize --save
+npm install papaparse
+npm i react-native-document-picker
+expo install expo-document-picker
+expo install expo-file-system
