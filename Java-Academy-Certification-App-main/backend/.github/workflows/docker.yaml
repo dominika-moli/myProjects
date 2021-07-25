@@ -1,0 +1,21 @@
+name: Docker Image CI
+on:
+  push:
+    branches: [ certification-app-h2-web-sec-complete ]
+  pull_request:
+    branches: [ certification-app-h2-web-sec-complete ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Login to Docker Registry
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag "${{ secrets.DOCKER_USERNAME }}"/java-academy-2021-backend:latest
+      - name: Push image to Docker Registry
+        run: docker push "${{ secrets.DOCKER_USERNAME }}"/java-academy-2021-backend:latest

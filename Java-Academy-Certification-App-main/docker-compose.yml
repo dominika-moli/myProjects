@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+    certifications-ibm-frontend:
+        image: dominikamolitorisova/java-academy-2021-frontend:latest
+        restart: unless-stopped
+        depends_on:
+        - certifications-ibm-backend
+        ports:
+        - "8081:80"
+
+    certifications-ibm-backend:
+        image: dominikamolitorisova/java-academy-2021-backend:latest
+        restart: unless-stopped
+        ports:
+        - "8080:8080"
